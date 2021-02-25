@@ -1,7 +1,0 @@
-0.6
-2019.2
-Nov  6 2019
-21:42:20
-/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/simple_bram_ctrl.v,1613650377,verilog,,/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_simple_bram_ctrl.v,,simple_bram_ctrl,,,,,,,,
-/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_simple_bram_ctrl.v,1613650377,verilog,,,,tb_simple_bram_ctrl,,,,,,,,
-/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/true_dpbram.v,1613652659,verilog,,/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/simple_bram_ctrl.v,,true_dpbram,,,,,,,,

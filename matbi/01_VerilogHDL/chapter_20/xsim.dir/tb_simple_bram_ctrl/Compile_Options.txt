@@ -1,1 +1,0 @@
-"tb_simple_bram_ctrl" -debug "wave" -s "tb_simple_bram_ctrl" 

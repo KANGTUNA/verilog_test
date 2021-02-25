@@ -32,8 +32,8 @@ module true_dpbram (
 	d1
 );
 
-parameter DWIDTH = 16;		
-parameter AWIDTH = 12;		
+parameter DWIDTH = 16;
+parameter AWIDTH = 12;
 parameter MEM_SIZE = 3840;
 
 input clk;
