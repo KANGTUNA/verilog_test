@@ -1,0 +1,247 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Feb 18 21:05:49 2021
+# Process ID: 15142
+# Current directory: /home/commit/RISC_V/verilog_practice/SimpleCache/Completed
+# Command line: vivado
+# Log file: /home/commit/RISC_V/verilog_practice/SimpleCache/Completed/vivado.log
+# Journal file: /home/commit/RISC_V/verilog_practice/SimpleCache/Completed/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project simple_cache /home/commit/RISC_V/verilog_practice/SimpleCache/Completed/simple_cache -part xc7vx485tffg1157-1
+add_files -norecurse {/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/cache_and_ram.v /home/commit/RISC_V/verilog_practice/SimpleCache/Completed/testbench.v /home/commit/RISC_V/verilog_practice/SimpleCache/Completed/cache.v /home/commit/RISC_V/verilog_practice/SimpleCache/Completed/ram.v}
+update_compile_order -fileset sources_1
+launch_simulation
+source testbench.tcl
+current_wave_config {Untitled 1}
+add_wave {{/testbench/tb/cache/cache}} {{/testbench/tb/cache/tag_array}} {{/testbench/tb/cache/valid_array}} {{/testbench/tb/cache/size}} {{/testbench/tb/cache/index_size}} 
+restart
+run all
+close_sim
+launch_simulation
+source testbench.tcl
+current_wave_config {Untitled 2}
+add_wave {{/testbench/tb/cache/cache}} {{/testbench/tb/cache/tag_array}} {{/testbench/tb/cache/valid_array}} {{/testbench/tb/cache/size}} {{/testbench/tb/cache/index_size}} 
+restart
+run all
+close_sim
+close_project
+create_project dongwon_ram /home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram -part xc7vx485tffg1157-1
+add_files -norecurse {/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram.v /home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v}
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_dongwon_ram.tcl
+current_wave_config {Untitled 3}
+add_wave {{/tb_dongwon_ram/u_dongwon_ram/ram}} 
+restart
+run all
+close_sim
+launch_simulation
+source tb_dongwon_ram.tcl
+current_wave_config {Untitled 4}
+add_wave {{/tb_dongwon_ram/u_dongwon_ram/ram}} 
+restart
+run all
+close_sim
+launch_simulation
+source tb_dongwon_ram.tcl
+current_wave_config {Untitled 5}
+add_wave {{/tb_dongwon_ram/u_dongwon_ram/ram}} 
+restart
+run all
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+add_files -norecurse /home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_dongwon_ram.tcl
+close_sim
+launch_simulation
+source tb_dongwon_ram.tcl
+current_wave_config {Untitled 7}
+add_wave {{/tb_dongwon_ram/u_dongwon_ram/clk}} {{/tb_dongwon_ram/u_dongwon_ram/reset_n}} {{/tb_dongwon_ram/u_dongwon_ram/i_run}} {{/tb_dongwon_ram/u_dongwon_ram/addr}} {{/tb_dongwon_ram/u_dongwon_ram/in_data}} {{/tb_dongwon_ram/u_dongwon_ram/we}} {{/tb_dongwon_ram/u_dongwon_ram/out_data}} {{/tb_dongwon_ram/u_dongwon_ram/is_write_done}} {{/tb_dongwon_ram/u_dongwon_ram/is_read_done}} {{/tb_dongwon_ram/u_dongwon_ram/c_state}} {{/tb_dongwon_ram/u_dongwon_ram/n_state}} {{/tb_dongwon_ram/u_dongwon_ram/ram}} {{/tb_dongwon_ram/u_dongwon_ram/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_ram/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_ram/MEM_SIZE}} {{/tb_dongwon_ram/u_dongwon_ram/S_IDLE}} {{/tb_dongwon_ram/u_dongwon_ram/S_WRITE}} {{/tb_dongwon_ram/u_dongwon_ram/S_READ}} {{/tb_dongwon_ram/u_dongwon_ram/S_DONE}} 
+restart
+run all
+current_wave_config {Untitled 7}
+add_wave {{/tb_dongwon_ram/pc}} 
+current_wave_config {Untitled 7}
+add_wave {{/tb_dongwon_ram/u_dongwon_cpu/reset_n}} {{/tb_dongwon_ram/u_dongwon_cpu/clk}} {{/tb_dongwon_ram/u_dongwon_cpu/pc}} {{/tb_dongwon_ram/u_dongwon_cpu/ADDR_WIDTH}} 
+current_wave_config {Untitled 7}
+add_wave {{/tb_dongwon_ram/pc}} {{/tb_dongwon_ram/we}} {{/tb_dongwon_ram/clk}} {{/tb_dongwon_ram/reset_n}} {{/tb_dongwon_ram/i_run}} {{/tb_dongwon_ram/in_data}} {{/tb_dongwon_ram/out_data}} {{/tb_dongwon_ram/iter}} 
+restart
+run all
+current_wave_config {Untitled 7}
+add_wave {{/tb_dongwon_ram/u_dongwon_ram/clk}} {{/tb_dongwon_ram/u_dongwon_ram/reset_n}} {{/tb_dongwon_ram/u_dongwon_ram/i_run}} {{/tb_dongwon_ram/u_dongwon_ram/addr}} {{/tb_dongwon_ram/u_dongwon_ram/in_data}} {{/tb_dongwon_ram/u_dongwon_ram/we}} {{/tb_dongwon_ram/u_dongwon_ram/out_data}} {{/tb_dongwon_ram/u_dongwon_ram/is_write_done}} {{/tb_dongwon_ram/u_dongwon_ram/is_read_done}} {{/tb_dongwon_ram/u_dongwon_ram/c_state}} {{/tb_dongwon_ram/u_dongwon_ram/n_state}} {{/tb_dongwon_ram/u_dongwon_ram/ram}} {{/tb_dongwon_ram/u_dongwon_ram/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_ram/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_ram/MEM_SIZE}} {{/tb_dongwon_ram/u_dongwon_ram/S_IDLE}} {{/tb_dongwon_ram/u_dongwon_ram/S_WRITE}} {{/tb_dongwon_ram/u_dongwon_ram/S_READ}} {{/tb_dongwon_ram/u_dongwon_ram/S_DONE}} 
+close_sim
+launch_simulation
+source tb_dongwon_ram.tcl
+current_wave_config {Untitled 8}
+add_wave {{/tb_dongwon_ram/u_dongwon_ram/clk}} {{/tb_dongwon_ram/u_dongwon_ram/reset_n}} {{/tb_dongwon_ram/u_dongwon_ram/i_run}} {{/tb_dongwon_ram/u_dongwon_ram/addr}} {{/tb_dongwon_ram/u_dongwon_ram/in_data}} {{/tb_dongwon_ram/u_dongwon_ram/we}} {{/tb_dongwon_ram/u_dongwon_ram/out_data}} {{/tb_dongwon_ram/u_dongwon_ram/is_write_done}} {{/tb_dongwon_ram/u_dongwon_ram/is_read_done}} {{/tb_dongwon_ram/u_dongwon_ram/c_state}} {{/tb_dongwon_ram/u_dongwon_ram/n_state}} {{/tb_dongwon_ram/u_dongwon_ram/ram}} {{/tb_dongwon_ram/u_dongwon_ram/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_ram/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_ram/MEM_SIZE}} {{/tb_dongwon_ram/u_dongwon_ram/S_IDLE}} {{/tb_dongwon_ram/u_dongwon_ram/S_WRITE}} {{/tb_dongwon_ram/u_dongwon_ram/S_READ}} {{/tb_dongwon_ram/u_dongwon_ram/S_DONE}} 
+restart
+run all
+close_sim
+launch_simulation
+source tb_dongwon_ram.tcl
+current_wave_config {}
+add_wave {{/tb_dongwon_ram/u_dongwon_ram}} 
+current_wave_config {Untitled 9}
+add_wave {{/tb_dongwon_ram/u_dongwon_ram}} 
+restart
+run all
+close_sim
+launch_simulation
+source tb_dongwon_ram.tcl
+current_wave_config {Untitled 10}
+add_wave {{/tb_dongwon_ram/u_dongwon_ram}} 
+restart
+run all
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+add_files -norecurse /home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_dongwon_ram.tcl
+current_wave_config {Untitled 11}
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} 
+restart
+run all
+close_sim
+launch_simulation
+source tb_dongwon_ram.tcl
+current_wave_config {Untitled 12}
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache}} 
+restart
+run all
+current_wave_config {Untitled 12}
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} 
+restart
+run all
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source tb_dongwon_ram.tcl
+current_wave_config {Untitled 13}
+add_wave {{/tb_dongwon_ram/u_dongwon_cache}} 
+restart
+run all
+close_sim
+launch_simulation
+source tb_dongwon_ram.tcl
+current_wave_config {Untitled 14}
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/we}} {{/tb_dongwon_ram/u_dongwon_cache/in_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/valid_bit}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} 
+restart
+run all
+close_sim
+launch_simulation
+source tb_dongwon_ram.tcl
+current_wave_config {Untitled 15}
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/we}} {{/tb_dongwon_ram/u_dongwon_cache/in_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/valid_bit}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} 
+restart
+run all
+close_sim
+launch_simulation
+source tb_dongwon_ram.tcl
+current_wave_config {Untitled 16}
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/we}} {{/tb_dongwon_ram/u_dongwon_cache/in_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/valid_bit}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} 
+restart
+run all
+close_sim
+launch_simulation
+source tb_dongwon_ram.tcl
+current_wave_config {Untitled 17}
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/we}} {{/tb_dongwon_ram/u_dongwon_cache/in_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/valid_bit}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} 
+restart
+run all
+close_sim
+launch_simulation
+source tb_dongwon_ram.tcl
+current_wave_config {Untitled 18}
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/we}} {{/tb_dongwon_ram/u_dongwon_cache/in_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/valid_bit}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} 
+restart
+run all
+close_sim
+launch_simulation
+source tb_dongwon_ram.tcl
+current_wave_config {Untitled 19}
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/we}} {{/tb_dongwon_ram/u_dongwon_cache/in_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/valid_bit}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache_line}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} 
+restart
+run all
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source tb_dongwon_ram.tcl
+current_wave_config {Untitled 20}
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/we}} {{/tb_dongwon_ram/u_dongwon_cache/in_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/valid_bit}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache_line}} {{/tb_dongwon_ram/u_dongwon_cache/iter}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} 
+restart
+run all
+close_sim
+launch_simulation
+source tb_dongwon_ram.tcl
+close_sim
+launch_simulation
+source tb_dongwon_ram.tcl
+current_wave_config {Untitled 22}
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/reset_n}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/we}} {{/tb_dongwon_ram/u_dongwon_cache/in_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/valid_bit}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache_line}} {{/tb_dongwon_ram/u_dongwon_cache/iter}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} 
+restart
+run all
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source tb_dongwon_ram.tcl
+current_wave_config {Untitled 23}
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/reset_n}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/we}} {{/tb_dongwon_ram/u_dongwon_cache/in_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/idx_valid}} {{/tb_dongwon_ram/u_dongwon_cache/abc}} {{/tb_dongwon_ram/u_dongwon_cache/cache_line}} {{/tb_dongwon_ram/u_dongwon_cache/iter}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} 
+restart
+run all
+close_sim
+launch_simulation
+source tb_dongwon_ram.tcl
+current_wave_config {Untitled 24}
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/reset_n}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/we}} {{/tb_dongwon_ram/u_dongwon_cache/in_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/idx_valid}} {{/tb_dongwon_ram/u_dongwon_cache/abc}} {{/tb_dongwon_ram/u_dongwon_cache/cache_line}} {{/tb_dongwon_ram/u_dongwon_cache/iter}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} 
+restart
+run all
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source tb_dongwon_ram.tcl
+current_wave_config {Untitled 25}
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/reset_n}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/we}} {{/tb_dongwon_ram/u_dongwon_cache/in_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_valid_bit}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache_line}} {{/tb_dongwon_ram/u_dongwon_cache/iter}} {{/tb_dongwon_ram/u_dongwon_cache/abc}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_CACHE_LINE}} {{/tb_dongwon_ram/u_dongwon_cache/IDX_VALID}} 
+restart
+run all
+close_sim
+launch_simulation
+source tb_dongwon_ram.tcl
+current_wave_config {Untitled 26}
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/reset_n}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/we}} {{/tb_dongwon_ram/u_dongwon_cache/in_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_valid_bit}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache_line}} {{/tb_dongwon_ram/u_dongwon_cache/iter}} {{/tb_dongwon_ram/u_dongwon_cache/abc}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_CACHE_LINE}} {{/tb_dongwon_ram/u_dongwon_cache/IDX_VALID}} 
+restart
+run all
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim

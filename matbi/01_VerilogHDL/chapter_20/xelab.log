@@ -1,0 +1,18 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab tb_simple_bram_ctrl -debug wave -s tb_simple_bram_ctrl 
+Multi-threading is on. Using 4 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 7 for port 'addr1' [/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_simple_bram_ctrl.v:127]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ce1' [/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_simple_bram_ctrl.v:128]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'we1' [/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_simple_bram_ctrl.v:129]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'd1' [/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_simple_bram_ctrl.v:131]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.simple_bram_ctrl(AWIDTH=7,MEM_SI...
+Compiling module work.true_dpbram(AWIDTH=7,MEM_SIZE=12...
+Compiling module work.tb_simple_bram_ctrl
+Built simulation snapshot tb_simple_bram_ctrl

@@ -1,0 +1,16 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+address =          0 data =      14528 mode = 1 out =          x
+address =       3036 data =     526421 mode = 1 out =          x
+address =       2001 data =   25369366 mode = 1 out =          x
+address =       3036 data =      14528 mode = 1 out =          x
+address =       2001 data =      14528 mode = 1 out =          x
+address =       2001 data =          0 mode = 0 out =      14528
+address =          0 data =      14528 mode = 1 out =          x
+address =       3036 data =     526421 mode = 1 out =          x
+address =       2001 data =   25369366 mode = 1 out =          x
+address =       3036 data =      14528 mode = 1 out =          x
+address =       2001 data =      14528 mode = 1 out =          x
+address =       2001 data =          0 mode = 0 out =      14528
+address =       3036 data =          0 mode = 0 out =      14528
+$finish called at time : 1400 ns : File "/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/testbench.v" Line 59

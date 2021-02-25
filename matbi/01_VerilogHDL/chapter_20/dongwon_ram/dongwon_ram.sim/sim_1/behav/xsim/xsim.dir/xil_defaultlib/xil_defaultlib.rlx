@@ -1,0 +1,9 @@
+0.6
+2019.2
+Nov  6 2019
+21:42:20
+/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v,1614062962,verilog,,/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram.v,,dongwon_cache,,,,,,,,
+/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v,1614040792,verilog,,/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram.v,,dongwon_cpu,,,,,,,,
+/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram.v,1614063628,verilog,,/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v,,dongwon_ram,,,,,,,,
+/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v,1614064557,verilog,,,,tb_dongwon_ram,,,,,,,,

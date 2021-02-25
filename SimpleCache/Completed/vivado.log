@@ -1,0 +1,4312 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Feb 18 21:05:49 2021
+# Process ID: 15142
+# Current directory: /home/commit/RISC_V/verilog_practice/SimpleCache/Completed
+# Command line: vivado
+# Log file: /home/commit/RISC_V/verilog_practice/SimpleCache/Completed/vivado.log
+# Journal file: /home/commit/RISC_V/verilog_practice/SimpleCache/Completed/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project simple_cache /home/commit/RISC_V/verilog_practice/SimpleCache/Completed/simple_cache -part xc7vx485tffg1157-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/commit/vivado/Vivado/2019.2/data/ip'.
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 472 ; free virtual = 24011
+add_files -norecurse {/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/cache_and_ram.v /home/commit/RISC_V/verilog_practice/SimpleCache/Completed/testbench.v /home/commit/RISC_V/verilog_practice/SimpleCache/Completed/cache.v /home/commit/RISC_V/verilog_practice/SimpleCache/Completed/ram.v}
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/simple_cache/simple_cache.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/simple_cache/simple_cache.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj testbench_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/cache_and_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cache_and_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/simple_cache/simple_cache.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/simple_cache/simple_cache.sim/sim_1/behav/xsim'
+xelab -wto fc93494cb4d344dea4dfe73fdda2241f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto fc93494cb4d344dea4dfe73fdda2241f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/simple_cache/simple_cache.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ram
+Compiling module xil_defaultlib.cache
+Compiling module xil_defaultlib.cache_and_ram
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/commit/RISC_V/verilog_practice/SimpleCache/Completed/simple_cache/simple_cache.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/simple_cache/simple_cache.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Feb 18 21:08:25 2021. For additional details about this file, please refer to the WebTalk help file at /home/commit/vivado/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Feb 18 21:08:25 2021...
+run_program: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 567 ; free virtual = 24107
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/simple_cache/simple_cache.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+address =          0 data =      14528 mode = 1 out =          x
+address =       3036 data =     526421 mode = 1 out =          x
+address =       2001 data =   25369366 mode = 1 out =          x
+address =       3036 data =      14528 mode = 1 out =          x
+address =       2001 data =      14528 mode = 1 out =          x
+address =       2001 data =          0 mode = 0 out =      14528
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 550 ; free virtual = 24090
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/testbench/tb/cache/cache}} {{/testbench/tb/cache/tag_array}} {{/testbench/tb/cache/valid_array}} {{/testbench/tb/cache/size}} {{/testbench/tb/cache/index_size}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+address =          0 data =      14528 mode = 1 out =          x
+address =       3036 data =     526421 mode = 1 out =          x
+address =       2001 data =   25369366 mode = 1 out =          x
+address =       3036 data =      14528 mode = 1 out =          x
+address =       2001 data =      14528 mode = 1 out =          x
+address =       2001 data =          0 mode = 0 out =      14528
+address =       3036 data =          0 mode = 0 out =      14528
+address =          0 data =      14528 mode = 0 out =      14528
+run: Time (s): cpu = 00:00:39 ; elapsed = 00:00:31 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 455 ; free virtual = 23997
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 477 ; free virtual = 23989
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/simple_cache/simple_cache.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/simple_cache/simple_cache.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj testbench_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/cache_and_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cache_and_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/simple_cache/simple_cache.sim/sim_1/behav/xsim'
+xelab -wto fc93494cb4d344dea4dfe73fdda2241f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto fc93494cb4d344dea4dfe73fdda2241f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/simple_cache/simple_cache.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ram
+Compiling module xil_defaultlib.cache
+Compiling module xil_defaultlib.cache_and_ram
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/simple_cache/simple_cache.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+address =          0 data =      14528 mode = 1 out =          x
+address =       3036 data =     526421 mode = 1 out =          x
+address =       2001 data =   25369366 mode = 1 out =          x
+address =       3036 data =      14528 mode = 1 out =          x
+address =       2001 data =      14528 mode = 1 out =          x
+address =       2001 data =          0 mode = 0 out =      14528
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 1044 ; free virtual = 24409
+current_wave_config {Untitled 2}
+Untitled 2
+add_wave {{/testbench/tb/cache/cache}} {{/testbench/tb/cache/tag_array}} {{/testbench/tb/cache/valid_array}} {{/testbench/tb/cache/size}} {{/testbench/tb/cache/index_size}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+address =          0 data =      14528 mode = 1 out =          x
+address =       3036 data =     526421 mode = 1 out =          x
+address =       2001 data =   25369366 mode = 1 out =          x
+address =       3036 data =      14528 mode = 1 out =          x
+address =       2001 data =      14528 mode = 1 out =          x
+address =       2001 data =          0 mode = 0 out =      14528
+address =       3036 data =          0 mode = 0 out =      14528
+$finish called at time : 1400 ns : File "/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/testbench.v" Line 59
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+create_project dongwon_ram /home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram -part xc7vx485tffg1157-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/commit/vivado/Vivado/2019.2/data/ip'.
+add_files -norecurse {/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram.v /home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v}
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_ram
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim/xsim.dir/tb_dongwon_ram_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim/xsim.dir/tb_dongwon_ram_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Feb 18 22:54:02 2021. For additional details about this file, please refer to the WebTalk help file at /home/commit/vivado/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Feb 18 22:54:02 2021...
+run_program: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 1333 ; free virtual = 24818
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_dongwon_ram_behav -key {Behavioral:sim_1:Functional:tb_dongwon_ram} -tclbatch {tb_dongwon_ram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_dongwon_ram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 40 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 37
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dongwon_ram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 1190 ; free virtual = 24675
+current_wave_config {Untitled 3}
+Untitled 3
+add_wave {{/tb_dongwon_ram/u_dongwon_ram/ram}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$finish called at time : 40 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 37
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 1306 ; free virtual = 24843
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_ram
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_dongwon_ram_behav -key {Behavioral:sim_1:Functional:tb_dongwon_ram} -tclbatch {tb_dongwon_ram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_dongwon_ram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 40 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 37
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dongwon_ram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 1379 ; free virtual = 24916
+current_wave_config {Untitled 4}
+Untitled 4
+add_wave {{/tb_dongwon_ram/u_dongwon_ram/ram}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$finish called at time : 40 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 37
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_ram
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_dongwon_ram_behav -key {Behavioral:sim_1:Functional:tb_dongwon_ram} -tclbatch {tb_dongwon_ram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_dongwon_ram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 40 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 38
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dongwon_ram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 1358 ; free virtual = 24896
+current_wave_config {Untitled 5}
+Untitled 5
+add_wave {{/tb_dongwon_ram/u_dongwon_ram/ram}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$finish called at time : 40 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 38
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <dongwon_cpu> not found while processing module instance <u_dongwon_cpu> [/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v:84]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+add_files -norecurse /home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_ram
+Compiling module xil_defaultlib.dongwon_cpu
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_dongwon_ram_behav -key {Behavioral:sim_1:Functional:tb_dongwon_ram} -tclbatch {tb_dongwon_ram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_dongwon_ram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dongwon_ram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 829 ; free virtual = 23921
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_ram
+Compiling module xil_defaultlib.dongwon_cpu
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_dongwon_ram_behav -key {Behavioral:sim_1:Functional:tb_dongwon_ram} -tclbatch {tb_dongwon_ram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_dongwon_ram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dongwon_ram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 771 ; free virtual = 23865
+current_wave_config {Untitled 7}
+Untitled 7
+add_wave {{/tb_dongwon_ram/u_dongwon_ram/clk}} {{/tb_dongwon_ram/u_dongwon_ram/reset_n}} {{/tb_dongwon_ram/u_dongwon_ram/i_run}} {{/tb_dongwon_ram/u_dongwon_ram/addr}} {{/tb_dongwon_ram/u_dongwon_ram/in_data}} {{/tb_dongwon_ram/u_dongwon_ram/we}} {{/tb_dongwon_ram/u_dongwon_ram/out_data}} {{/tb_dongwon_ram/u_dongwon_ram/is_write_done}} {{/tb_dongwon_ram/u_dongwon_ram/is_read_done}} {{/tb_dongwon_ram/u_dongwon_ram/c_state}} {{/tb_dongwon_ram/u_dongwon_ram/n_state}} {{/tb_dongwon_ram/u_dongwon_ram/ram}} {{/tb_dongwon_ram/u_dongwon_ram/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_ram/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_ram/MEM_SIZE}} {{/tb_dongwon_ram/u_dongwon_ram/S_IDLE}} {{/tb_dongwon_ram/u_dongwon_ram/S_WRITE}} {{/tb_dongwon_ram/u_dongwon_ram/S_READ}} {{/tb_dongwon_ram/u_dongwon_ram/S_DONE}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+$finish called at time : 1315 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 60
+current_wave_config {Untitled 7}
+Untitled 7
+add_wave {{/tb_dongwon_ram/pc}} 
+current_wave_config {Untitled 7}
+Untitled 7
+add_wave {{/tb_dongwon_ram/u_dongwon_cpu/reset_n}} {{/tb_dongwon_ram/u_dongwon_cpu/clk}} {{/tb_dongwon_ram/u_dongwon_cpu/pc}} {{/tb_dongwon_ram/u_dongwon_cpu/ADDR_WIDTH}} 
+current_wave_config {Untitled 7}
+Untitled 7
+add_wave {{/tb_dongwon_ram/pc}} {{/tb_dongwon_ram/we}} {{/tb_dongwon_ram/clk}} {{/tb_dongwon_ram/reset_n}} {{/tb_dongwon_ram/i_run}} {{/tb_dongwon_ram/in_data}} {{/tb_dongwon_ram/out_data}} {{/tb_dongwon_ram/iter}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+$finish called at time : 1315 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 60
+current_wave_config {Untitled 7}
+Untitled 7
+add_wave {{/tb_dongwon_ram/u_dongwon_ram/clk}} {{/tb_dongwon_ram/u_dongwon_ram/reset_n}} {{/tb_dongwon_ram/u_dongwon_ram/i_run}} {{/tb_dongwon_ram/u_dongwon_ram/addr}} {{/tb_dongwon_ram/u_dongwon_ram/in_data}} {{/tb_dongwon_ram/u_dongwon_ram/we}} {{/tb_dongwon_ram/u_dongwon_ram/out_data}} {{/tb_dongwon_ram/u_dongwon_ram/is_write_done}} {{/tb_dongwon_ram/u_dongwon_ram/is_read_done}} {{/tb_dongwon_ram/u_dongwon_ram/c_state}} {{/tb_dongwon_ram/u_dongwon_ram/n_state}} {{/tb_dongwon_ram/u_dongwon_ram/ram}} {{/tb_dongwon_ram/u_dongwon_ram/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_ram/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_ram/MEM_SIZE}} {{/tb_dongwon_ram/u_dongwon_ram/S_IDLE}} {{/tb_dongwon_ram/u_dongwon_ram/S_WRITE}} {{/tb_dongwon_ram/u_dongwon_ram/S_READ}} {{/tb_dongwon_ram/u_dongwon_ram/S_DONE}} 
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_ram
+Compiling module xil_defaultlib.dongwon_cpu
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_dongwon_ram_behav -key {Behavioral:sim_1:Functional:tb_dongwon_ram} -tclbatch {tb_dongwon_ram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_dongwon_ram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dongwon_ram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 597 ; free virtual = 23794
+current_wave_config {Untitled 8}
+Untitled 8
+add_wave {{/tb_dongwon_ram/u_dongwon_ram/clk}} {{/tb_dongwon_ram/u_dongwon_ram/reset_n}} {{/tb_dongwon_ram/u_dongwon_ram/i_run}} {{/tb_dongwon_ram/u_dongwon_ram/addr}} {{/tb_dongwon_ram/u_dongwon_ram/in_data}} {{/tb_dongwon_ram/u_dongwon_ram/we}} {{/tb_dongwon_ram/u_dongwon_ram/out_data}} {{/tb_dongwon_ram/u_dongwon_ram/is_write_done}} {{/tb_dongwon_ram/u_dongwon_ram/is_read_done}} {{/tb_dongwon_ram/u_dongwon_ram/c_state}} {{/tb_dongwon_ram/u_dongwon_ram/n_state}} {{/tb_dongwon_ram/u_dongwon_ram/ram}} {{/tb_dongwon_ram/u_dongwon_ram/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_ram/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_ram/MEM_SIZE}} {{/tb_dongwon_ram/u_dongwon_ram/S_IDLE}} {{/tb_dongwon_ram/u_dongwon_ram/S_WRITE}} {{/tb_dongwon_ram/u_dongwon_ram/S_READ}} {{/tb_dongwon_ram/u_dongwon_ram/S_DONE}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+$finish called at time : 1325 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 62
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_ram
+Compiling module xil_defaultlib.dongwon_cpu
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_dongwon_ram_behav -key {Behavioral:sim_1:Functional:tb_dongwon_ram} -tclbatch {tb_dongwon_ram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_dongwon_ram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dongwon_ram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 817 ; free virtual = 23874
+current_wave_config {}
+WARNING: [Wavedata 42-16] Error Unable to get wave configuration ''.
+Untitled 9
+add_wave {{/tb_dongwon_ram/u_dongwon_ram}} 
+current_wave_config {Untitled 9}
+Untitled 9
+add_wave {{/tb_dongwon_ram/u_dongwon_ram}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+$finish called at time : 1315 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 61
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_ram
+Compiling module xil_defaultlib.dongwon_cpu
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_dongwon_ram_behav -key {Behavioral:sim_1:Functional:tb_dongwon_ram} -tclbatch {tb_dongwon_ram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_dongwon_ram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+  x
+  0
+  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dongwon_ram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 836 ; free virtual = 23894
+current_wave_config {Untitled 10}
+Untitled 10
+add_wave {{/tb_dongwon_ram/u_dongwon_ram}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+  x
+  0
+  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+$finish called at time : 1315 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 61
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <dongwon_cache> not found while processing module instance <u_dongwon_cache> [/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v:98]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+add_files -norecurse /home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" Line 3. Module dongwon_cache_default doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_ram(ADDR_WIDTH=32,DATA_W...
+Compiling module xil_defaultlib.dongwon_cpu(ADDR_WIDTH=32)
+Compiling module xil_defaultlib.dongwon_cache_default
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_dongwon_ram_behav -key {Behavioral:sim_1:Functional:tb_dongwon_ram} -tclbatch {tb_dongwon_ram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_dongwon_ram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+         0
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dongwon_ram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 831 ; free virtual = 23678
+current_wave_config {Untitled 11}
+Untitled 11
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} 
+WARNING: [Wavedata 42-489] Can't add object "/tb_dongwon_ram/u_dongwon_cache/cache" to the wave window because it has 258048 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+         0
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+$finish called at time : 1315 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 63
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" Line 3. Module dongwon_cache(CACHE_SIZE=1024) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_ram(ADDR_WIDTH=32,DATA_W...
+Compiling module xil_defaultlib.dongwon_cpu(ADDR_WIDTH=32)
+Compiling module xil_defaultlib.dongwon_cache(CACHE_SIZE=1024)
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_dongwon_ram_behav -key {Behavioral:sim_1:Functional:tb_dongwon_ram} -tclbatch {tb_dongwon_ram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_dongwon_ram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+         0
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dongwon_ram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 735 ; free virtual = 23592
+current_wave_config {Untitled 12}
+Untitled 12
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+         0
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+$finish called at time : 1315 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 63
+current_wave_config {Untitled 12}
+Untitled 12
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+         0
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+         x
+$finish called at time : 1315 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 63
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" Line 3. Module dongwon_cache(CACHE_SIZE=1024) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_cpu(ADDR_WIDTH=32)
+Compiling module xil_defaultlib.dongwon_cache(CACHE_SIZE=1024)
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_dongwon_ram_behav -key {Behavioral:sim_1:Functional:tb_dongwon_ram} -tclbatch {tb_dongwon_ram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_dongwon_ram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dongwon_ram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 874 ; free virtual = 23669
+current_wave_config {Untitled 13}
+Untitled 13
+add_wave {{/tb_dongwon_ram/u_dongwon_cache}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+$finish called at time : 1315 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 63
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" Line 3. Module dongwon_cache(CACHE_SIZE=1024) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_cpu(ADDR_WIDTH=32)
+Compiling module xil_defaultlib.dongwon_cache(CACHE_SIZE=1024)
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_dongwon_ram_behav -key {Behavioral:sim_1:Functional:tb_dongwon_ram} -tclbatch {tb_dongwon_ram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_dongwon_ram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dongwon_ram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 882 ; free virtual = 23682
+current_wave_config {Untitled 14}
+Untitled 14
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/we}} {{/tb_dongwon_ram/u_dongwon_cache/in_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/valid_bit}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+$finish called at time : 1315 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 63
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" Line 3. Module dongwon_cache(CACHE_SIZE=1024) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_cpu(ADDR_WIDTH=32)
+Compiling module xil_defaultlib.dongwon_cache(CACHE_SIZE=1024)
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_dongwon_ram_behav -key {Behavioral:sim_1:Functional:tb_dongwon_ram} -tclbatch {tb_dongwon_ram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_dongwon_ram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dongwon_ram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 918 ; free virtual = 23663
+current_wave_config {Untitled 15}
+Untitled 15
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/we}} {{/tb_dongwon_ram/u_dongwon_cache/in_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/valid_bit}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+$finish called at time : 1315 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 63
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" Line 3. Module dongwon_cache(CACHE_SIZE=1024) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_cpu(ADDR_WIDTH=32)
+Compiling module xil_defaultlib.dongwon_cache(CACHE_SIZE=1024)
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_dongwon_ram_behav -key {Behavioral:sim_1:Functional:tb_dongwon_ram} -tclbatch {tb_dongwon_ram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_dongwon_ram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dongwon_ram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 765 ; free virtual = 23495
+current_wave_config {Untitled 16}
+Untitled 16
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/we}} {{/tb_dongwon_ram/u_dongwon_cache/in_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/valid_bit}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+$finish called at time : 1315 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 63
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cache
+WARNING: [VRFC 10-965] invalid size of integer constant literal [/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v:37]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" Line 3. Module dongwon_cache(CACHE_SIZE=1024) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_cpu(ADDR_WIDTH=32)
+Compiling module xil_defaultlib.dongwon_cache(CACHE_SIZE=1024)
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_dongwon_ram_behav -key {Behavioral:sim_1:Functional:tb_dongwon_ram} -tclbatch {tb_dongwon_ram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_dongwon_ram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dongwon_ram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 863 ; free virtual = 23596
+current_wave_config {Untitled 17}
+Untitled 17
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/we}} {{/tb_dongwon_ram/u_dongwon_cache/in_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/valid_bit}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+$finish called at time : 1315 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 63
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cache
+WARNING: [VRFC 10-965] invalid size of integer constant literal [/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v:37]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" Line 3. Module dongwon_cache(CACHE_SIZE=1024) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_cpu(ADDR_WIDTH=32)
+Compiling module xil_defaultlib.dongwon_cache(CACHE_SIZE=1024)
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_dongwon_ram_behav -key {Behavioral:sim_1:Functional:tb_dongwon_ram} -tclbatch {tb_dongwon_ram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_dongwon_ram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dongwon_ram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 800 ; free virtual = 23542
+current_wave_config {Untitled 18}
+Untitled 18
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/we}} {{/tb_dongwon_ram/u_dongwon_cache/in_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/valid_bit}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+$finish called at time : 1315 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 63
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" Line 3. Module dongwon_cache(CACHE_SIZE=1024) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_cpu(ADDR_WIDTH=32)
+Compiling module xil_defaultlib.dongwon_cache(CACHE_SIZE=1024)
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_dongwon_ram_behav -key {Behavioral:sim_1:Functional:tb_dongwon_ram} -tclbatch {tb_dongwon_ram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_dongwon_ram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dongwon_ram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 1074 ; free virtual = 24122
+current_wave_config {Untitled 19}
+Untitled 19
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/we}} {{/tb_dongwon_ram/u_dongwon_cache/in_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/valid_bit}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache_line}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+$finish called at time : 1315 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 63
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cache
+ERROR: [VRFC 10-4982] syntax error near '+' [/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v:38]
+ERROR: [VRFC 10-552] declarations not allowed in unnamed block [/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v:36]
+ERROR: [VRFC 10-2865] module 'dongwon_cache' ignored due to previous errors [/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v:3]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cache
+ERROR: [VRFC 10-4982] syntax error near '+' [/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v:38]
+ERROR: [VRFC 10-552] declarations not allowed in unnamed block [/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v:36]
+ERROR: [VRFC 10-2865] module 'dongwon_cache' ignored due to previous errors [/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v:3]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cache
+ERROR: [VRFC 10-4982] syntax error near '+' [/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v:38]
+ERROR: [VRFC 10-552] declarations not allowed in unnamed block [/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v:36]
+WARNING: [VRFC 10-3824] variable 'iter' must explicitly be declared as automatic or static [/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v:37]
+ERROR: [VRFC 10-2865] module 'dongwon_cache' ignored due to previous errors [/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v:3]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" Line 3. Module dongwon_cache(CACHE_SIZE=1024) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_cpu(ADDR_WIDTH=32)
+Compiling module xil_defaultlib.dongwon_cache(CACHE_SIZE=1024)
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_dongwon_ram_behav -key {Behavioral:sim_1:Functional:tb_dongwon_ram} -tclbatch {tb_dongwon_ram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_dongwon_ram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dongwon_ram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 894 ; free virtual = 23919
+current_wave_config {Untitled 20}
+Untitled 20
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/we}} {{/tb_dongwon_ram/u_dongwon_cache/in_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/valid_bit}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache_line}} {{/tb_dongwon_ram/u_dongwon_cache/iter}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+$finish called at time : 1315 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 63
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" Line 3. Module dongwon_cache(CACHE_SIZE=1024) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_cpu(ADDR_WIDTH=32)
+Compiling module xil_defaultlib.dongwon_cache(CACHE_SIZE=1024)
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_dongwon_ram_behav -key {Behavioral:sim_1:Functional:tb_dongwon_ram} -tclbatch {tb_dongwon_ram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_dongwon_ram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dongwon_ram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 929 ; free virtual = 23955
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" Line 3. Module dongwon_cache(CACHE_SIZE=1024) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_cpu(ADDR_WIDTH=32)
+Compiling module xil_defaultlib.dongwon_cache(CACHE_SIZE=1024)
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_dongwon_ram_behav -key {Behavioral:sim_1:Functional:tb_dongwon_ram} -tclbatch {tb_dongwon_ram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_dongwon_ram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dongwon_ram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 1044 ; free virtual = 24072
+current_wave_config {Untitled 22}
+Untitled 22
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/reset_n}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/we}} {{/tb_dongwon_ram/u_dongwon_cache/in_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/valid_bit}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache_line}} {{/tb_dongwon_ram/u_dongwon_cache/iter}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+$finish called at time : 1315 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 63
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cache
+WARNING: [VRFC 10-3380] identifier 'cache_line' is used before its declaration [/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v:33]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" Line 3. Module dongwon_cache(CACHE_SIZE=1024) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_cpu(ADDR_WIDTH=32)
+Compiling module xil_defaultlib.dongwon_cache(CACHE_SIZE=1024)
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_dongwon_ram_behav -key {Behavioral:sim_1:Functional:tb_dongwon_ram} -tclbatch {tb_dongwon_ram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_dongwon_ram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dongwon_ram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 946 ; free virtual = 24011
+current_wave_config {Untitled 23}
+Untitled 23
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/reset_n}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/we}} {{/tb_dongwon_ram/u_dongwon_cache/in_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/idx_valid}} {{/tb_dongwon_ram/u_dongwon_cache/abc}} {{/tb_dongwon_ram/u_dongwon_cache/cache_line}} {{/tb_dongwon_ram/u_dongwon_cache/iter}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+$finish called at time : 1315 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 63
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cache
+WARNING: [VRFC 10-3380] identifier 'cache_line' is used before its declaration [/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v:33]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" Line 3. Module dongwon_cache(CACHE_SIZE=1024) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_cpu(ADDR_WIDTH=32)
+Compiling module xil_defaultlib.dongwon_cache(CACHE_SIZE=1024)
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_dongwon_ram_behav -key {Behavioral:sim_1:Functional:tb_dongwon_ram} -tclbatch {tb_dongwon_ram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_dongwon_ram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dongwon_ram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 862 ; free virtual = 23923
+current_wave_config {Untitled 24}
+Untitled 24
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/reset_n}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/we}} {{/tb_dongwon_ram/u_dongwon_cache/in_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/idx_valid}} {{/tb_dongwon_ram/u_dongwon_cache/abc}} {{/tb_dongwon_ram/u_dongwon_cache/cache_line}} {{/tb_dongwon_ram/u_dongwon_cache/iter}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+$finish called at time : 1315 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 63
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" Line 3. Module dongwon_cache(CACHE_SIZE=1024) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_cpu(ADDR_WIDTH=32)
+Compiling module xil_defaultlib.dongwon_cache(CACHE_SIZE=1024)
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_dongwon_ram_behav -key {Behavioral:sim_1:Functional:tb_dongwon_ram} -tclbatch {tb_dongwon_ram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_dongwon_ram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dongwon_ram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 1091 ; free virtual = 24048
+current_wave_config {Untitled 25}
+Untitled 25
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/reset_n}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/we}} {{/tb_dongwon_ram/u_dongwon_cache/in_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_valid_bit}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache_line}} {{/tb_dongwon_ram/u_dongwon_cache/iter}} {{/tb_dongwon_ram/u_dongwon_cache/abc}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_CACHE_LINE}} {{/tb_dongwon_ram/u_dongwon_cache/IDX_VALID}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+$finish called at time : 1315 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 64
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" Line 3. Module dongwon_cache(CACHE_SIZE=32) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_cpu(ADDR_WIDTH=32)
+Compiling module xil_defaultlib.dongwon_cache(CACHE_SIZE=32)
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_dongwon_ram_behav -key {Behavioral:sim_1:Functional:tb_dongwon_ram} -tclbatch {tb_dongwon_ram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_dongwon_ram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dongwon_ram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 1127 ; free virtual = 24151
+current_wave_config {Untitled 26}
+Untitled 26
+add_wave {{/tb_dongwon_ram/u_dongwon_cache/clk}} {{/tb_dongwon_ram/u_dongwon_cache/reset_n}} {{/tb_dongwon_ram/u_dongwon_cache/addr}} {{/tb_dongwon_ram/u_dongwon_cache/we}} {{/tb_dongwon_ram/u_dongwon_cache/in_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_data}} {{/tb_dongwon_ram/u_dongwon_cache/out_valid_bit}} {{/tb_dongwon_ram/u_dongwon_cache/byte_offset}} {{/tb_dongwon_ram/u_dongwon_cache/index}} {{/tb_dongwon_ram/u_dongwon_cache/tag}} {{/tb_dongwon_ram/u_dongwon_cache/cache_line}} {{/tb_dongwon_ram/u_dongwon_cache/iter}} {{/tb_dongwon_ram/u_dongwon_cache/abc}} {{/tb_dongwon_ram/u_dongwon_cache/ADDR_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/DATA_WIDTH}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_SIZE}} {{/tb_dongwon_ram/u_dongwon_cache/CACHE_MODE}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_BYTE_OFFSET}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_INDEX}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_VALID}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_TAG}} {{/tb_dongwon_ram/u_dongwon_cache/SIZE_OF_CACHE_LINE}} {{/tb_dongwon_ram/u_dongwon_cache/IDX_VALID}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+$finish called at time : 1315 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" Line 64
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" Line 3. Module dongwon_cache(CACHE_SIZE=128) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_cpu(ADDR_WIDTH=32)
+Compiling module xil_defaultlib.dongwon_cache(CACHE_SIZE=128)
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 1023 ; free virtual = 24068
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+ERROR: [VRFC 10-4982] syntax error near 'end' [/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v:51]
+ERROR: [VRFC 10-2790] Verilog 2000 keyword end used in incorrect context [/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v:51]
+ERROR: [VRFC 10-2865] module 'tb_dongwon_ram' ignored due to previous errors [/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v:9]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" Line 3. Module dongwon_cache(CACHE_SIZE=128) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_cpu(ADDR_WIDTH=32)
+Compiling module xil_defaultlib.dongwon_cache(CACHE_SIZE=128)
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 941 ; free virtual = 23944
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_dongwon_ram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_dongwon_ram_vlog.prj
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dongwon_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_dongwon_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_dongwon_ram
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_ram/dongwon_ram.sim/sim_1/behav/xsim'
+xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto a075703a50f9434e9e61a6e557739950 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_dongwon_ram_behav xil_defaultlib.tb_dongwon_ram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/dongwon_cache.v" Line 3. Module dongwon_cache(CACHE_SIZE=128) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dongwon_cpu(ADDR_WIDTH=32)
+Compiling module xil_defaultlib.dongwon_cache(CACHE_SIZE=128)
+Compiling module xil_defaultlib.tb_dongwon_ram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_dongwon_ram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+         z
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 1109 ; free virtual = 24085

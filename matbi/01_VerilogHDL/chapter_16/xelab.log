@@ -1,0 +1,13 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/commit/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab tb_fsm_test -debug wave -s tb_fsm_test 
+Multi-threading is on. Using 4 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.fsm_test
+Compiling module work.tb_fsm_test
+Built simulation snapshot tb_fsm_test

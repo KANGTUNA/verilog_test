@@ -1,0 +1,49 @@
+#-----------------------------------------------------------
+# xsim v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Feb 19 09:21:53 2021
+# Process ID: 8126
+# Current directory: /home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20
+# Command line: xsim -source {xsim.dir/tb_simple_bram_ctrl/xsim_script.tcl}
+# Log file: /home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/xsim.log
+# Journal file: /home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/xsim.jou
+#-----------------------------------------------------------
+start_gui
+source xsim.dir/tb_simple_bram_ctrl/xsim_script.tcl
+# set_param project.enableReportConfiguration 0
+# load_feature core
+# current_fileset
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/commit/vivado/Vivado/2019.2/data/ip'.
+# xsim {tb_simple_bram_ctrl} -wdb {simulate_xsim_tb_simple_bram_ctrl.wdb} -autoloadwcfg
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+add_wave {{/tb_simple_bram_ctrl/clk}} {{/tb_simple_bram_ctrl/reset_n}} {{/tb_simple_bram_ctrl/i_run}} {{/tb_simple_bram_ctrl/i_num_cnt}} {{/tb_simple_bram_ctrl/o_idle}} {{/tb_simple_bram_ctrl/o_write}} {{/tb_simple_bram_ctrl/o_read}} {{/tb_simple_bram_ctrl/o_done}} {{/tb_simple_bram_ctrl/addr0}} {{/tb_simple_bram_ctrl/ce0}} {{/tb_simple_bram_ctrl/we0}} {{/tb_simple_bram_ctrl/q0}} {{/tb_simple_bram_ctrl/d0}} {{/tb_simple_bram_ctrl/o_valid}} {{/tb_simple_bram_ctrl/o_mem_data}} {{/tb_simple_bram_ctrl/i}} 
+run all
+initialize value [0]
+Reset! [0]
+Check Idle [125]
+Start! [125]
+Wait Done [135]
+Success Simulation!! (Matbi = gudok & joayo) [2235]
+$finish called at time : 2235 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_simple_bram_ctrl.v" Line 82
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb_simple_bram_ctrl/u_simple_bram_ctrl/num_cnt}} {{/tb_simple_bram_ctrl/u_simple_bram_ctrl/addr_cnt}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+initialize value [0]
+Reset! [0]
+Check Idle [125]
+Start! [125]
+Wait Done [135]
+Success Simulation!! (Matbi = gudok & joayo) [2235]
+$finish called at time : 2235 ns : File "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_simple_bram_ctrl.v" Line 82
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 743 ; free virtual = 23496
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Feb 19 18:19:04 2021...

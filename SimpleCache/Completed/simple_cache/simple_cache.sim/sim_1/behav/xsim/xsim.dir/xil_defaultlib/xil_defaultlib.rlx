@@ -1,0 +1,9 @@
+0.6
+2019.2
+Nov  6 2019
+21:42:20
+/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/cache.v,1613649864,verilog,,/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/cache_and_ram.v,,cache,,,,,,,,
+/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/cache_and_ram.v,1613649864,verilog,,/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/ram.v,,cache_and_ram,,,,,,,,
+/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/ram.v,1613649864,verilog,,/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/testbench.v,,ram,,,,,,,,
+/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/simple_cache/simple_cache.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/testbench.v,1613650170,verilog,,,,testbench,,,,,,,,

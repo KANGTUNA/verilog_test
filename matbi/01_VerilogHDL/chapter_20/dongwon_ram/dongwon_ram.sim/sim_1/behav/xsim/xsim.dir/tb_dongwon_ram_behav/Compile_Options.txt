@@ -1,0 +1,1 @@
+-wto "a075703a50f9434e9e61a6e557739950" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "tb_dongwon_ram_behav" "xil_defaultlib.tb_dongwon_ram" "xil_defaultlib.glbl" -log "elaborate.log" 

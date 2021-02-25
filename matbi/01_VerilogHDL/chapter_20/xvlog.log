@@ -1,0 +1,7 @@
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/true_dpbram.v" into library work
+INFO: [VRFC 10-311] analyzing module true_dpbram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/simple_bram_ctrl.v" into library work
+INFO: [VRFC 10-311] analyzing module simple_bram_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_20/tb_simple_bram_ctrl.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_simple_bram_ctrl

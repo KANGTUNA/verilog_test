@@ -1,0 +1,9 @@
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/cache_and_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cache_and_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/SimpleCache/Completed/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
