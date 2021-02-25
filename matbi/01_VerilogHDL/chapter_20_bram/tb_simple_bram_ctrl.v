@@ -22,7 +22,6 @@
 `define DATA_WIDTH 16
 `define MEM_DEPTH 128
 
-
 module tb_simple_bram_ctrl;
 reg clk , reset_n;
 reg 					i_run;

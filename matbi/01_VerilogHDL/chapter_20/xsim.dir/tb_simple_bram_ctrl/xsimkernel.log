@@ -1,7 +1,0 @@
-Running: xsim.dir/tb_simple_bram_ctrl/xsimk -wdb simulate_xsim_tb_simple_bram_ctrl.wdb -simmode gui -simrunnum 0 -socket 7142
-Design successfully loaded
-Design Loading Memory Usage: 22244 KB
-Design Loading CPU Usage: 60 ms
-Simulation completed
-Simulation Memory Usage: 105008 KB
-Simulation CPU Usage: 60 ms
