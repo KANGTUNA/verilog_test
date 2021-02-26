@@ -32,6 +32,10 @@ integer i;
 integer fd;
 
 initial begin
+
+$dumpfile("output.vcd");
+$dumpvars(0, tb_power_of_8);
+
 //initialize value
 $display("initialize value [%d]", $time);
     reset_n = 1;

@@ -28,6 +28,11 @@ always
  
 initial begin
 //initialize value
+
+$dumpfile("output.vcd");
+$dumpvars(0, tb_counter_100);
+
+
 $display("initialize value [%d]", $time);
     reset_n = 1;
     clk     = 0;

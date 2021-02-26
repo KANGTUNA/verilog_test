@@ -8,7 +8,7 @@ int main() {
 		for(int j = 0; j < 8; j++) {
 			result *= i; 
 		}
-		fprintf (fp, "result = %lu\n",result);
+		fprintf (fp, "i= %d\tresult = %lu\n",i, result);
 	}
 	fclose(fp);
 	return 0;

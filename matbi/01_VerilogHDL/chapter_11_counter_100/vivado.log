@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Feb 25 19:58:31 2021
+# Process ID: 11086
+# Current directory: /home/commit/RISC_V/verilog_test/matbi/01_VerilogHDL/chapter_11_counter_100
+# Command line: vivado
+# Log file: /home/commit/RISC_V/verilog_test/matbi/01_VerilogHDL/chapter_11_counter_100/vivado.log
+# Journal file: /home/commit/RISC_V/verilog_test/matbi/01_VerilogHDL/chapter_11_counter_100/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project counter_100 /home/commit/RISC_V/verilog_test/matbi/01_VerilogHDL/chapter_11_counter_100/counter_100 -part xc7vx485tffg1157-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/commit/vivado/Vivado/2019.2/data/ip'.
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 375 ; free virtual = 23688
+add_files -norecurse {/home/commit/RISC_V/verilog_test/matbi/01_VerilogHDL/chapter_11_counter_100/counter_100.v /home/commit/RISC_V/verilog_test/matbi/01_VerilogHDL/chapter_11_counter_100/tb_counter_100.v}
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 25 20:04:56 2021...

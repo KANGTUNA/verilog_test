@@ -25,25 +25,25 @@ module counter_100(
     output [6:0] o_cnt,
     output [6:0] o_cnt_always
     );
-	reg [6:0] cnt;  // 100 ê¹Œì§€ ì…€ìˆ˜ ìˆë„ë¡ overflow ë¥¼ í”¼í•˜ê¸° ìœ„í•´ì„œ 7 bit ë¥¼ ì„ ì–¸í•˜ì˜€ìŠµë‹ˆë‹¤. 0~127 (2^7)
+	reg [6:0] cnt;  // 100 ê¹Œì?? ????ˆ˜ ?ˆ?„ë¡? overflow ë¥? ?”¼?•˜ê¸? ?œ„?•´?„œ 7 bit ë¥? ?„ ?–¸?•˜????Šµ?‹ˆ?‹¤. 0~127 (2^7)
 	always @(posedge clk or negedge reset_n) begin
 	    if(!reset_n) begin
-	        cnt <= 0;  // 0 ë¶€í„° counting ê°€ëŠ¥.
+	        cnt <= 0;  // 0 ë¶??„° counting ê°??Š¥.
 	    end else if (cnt < 100) begin
-	        cnt <= cnt + 1; // clock ì´ postive edge ì¼ë•Œ ë§ˆë‹¤, counting ì„ í•¨.
+	        cnt <= cnt + 1; // clock ?´ postive edge ?¼?•Œ ë§ˆë‹¤, counting ?„ ?•¨.
 	    end
-	    // 100 ì´ ë„˜ì–´ê°€ë©´ ë”ì´ìƒ counting ì„ í•˜ì§€ ì•ŠìŒ.
+	    // 100 ?´ ?„˜?–´ê°?ë©? ?”?´?ƒ counting ?„ ?•˜ì§? ?•Š?Œ.
 	end
 	assign o_cnt = cnt;
 
-	reg [6:0] cnt_always;  // 100 ê¹Œì§€ ì…€ìˆ˜ ìˆë„ë¡ overflow ë¥¼ í”¼í•˜ê¸° ìœ„í•´ì„œ 7 bit ë¥¼ ì„ ì–¸í•˜ì˜€ìŠµë‹ˆë‹¤. 0~127 (2^7)
+	reg [6:0] cnt_always;  // 100 ê¹Œì?? ????ˆ˜ ?ˆ?„ë¡? overflow ë¥? ?”¼?•˜ê¸? ?œ„?•´?„œ 7 bit ë¥? ?„ ?–¸?•˜????Šµ?‹ˆ?‹¤. 0~127 (2^7)
 	always @(posedge clk or negedge reset_n) begin
 	    if(!reset_n) begin
-	        cnt_always <= 0;  // 0 ë¶€í„° counting ê°€ëŠ¥.
+	        cnt_always <= 0;  // 0 ë¶??„° counting ê°??Š¥.
 	    end else if (cnt_always == 100-1) begin
 	        cnt_always <= 0; // 99 -> 0
 	    end else begin
-	        cnt_always <= cnt_always + 1; // clock ì´ postive edge ì¼ë•Œ ë§ˆë‹¤, counting ì„ í•¨.
+	        cnt_always <= cnt_always + 1; // clock ?´ postive edge ?¼?•Œ ë§ˆë‹¤, counting ?„ ?•¨.
 		end
 	end
 	assign o_cnt_always = cnt_always;

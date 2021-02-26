@@ -1,0 +1,7 @@
+WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_test/matbi/01_VerilogHDL/chapter_11_counter_100/counter_100.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter_100
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_test/matbi/01_VerilogHDL/chapter_11_counter_100/tb_counter_100.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_counter_100
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_test/matbi/01_VerilogHDL/chapter_11_counter_100/counter_100/counter_100.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
