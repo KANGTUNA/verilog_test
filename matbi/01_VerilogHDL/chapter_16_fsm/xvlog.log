@@ -1,5 +1,5 @@
 WARNING: [XSIM 43-3479] Unable to increase the current process stack size.
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_16/fsm_test.v" into library work
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_test/matbi/01_VerilogHDL/chapter_16_fsm/fsm_test.v" into library work
 INFO: [VRFC 10-311] analyzing module fsm_test
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_practice/matbi/01_VerilogHDL/chapter_16/tb_fsm_test.v" into library work
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/commit/RISC_V/verilog_test/matbi/01_VerilogHDL/chapter_16_fsm/tb_fsm_test.v" into library work
 INFO: [VRFC 10-311] analyzing module tb_fsm_test

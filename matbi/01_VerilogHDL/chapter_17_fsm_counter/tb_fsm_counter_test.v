@@ -31,6 +31,10 @@ always
 
 initial begin
 //initialize value
+$dumpfile("output.vcd");
+$dumpvars(0, tb_fsm_counter_test);
+
+
 $display("initialize value [%d]", $time);
     reset_n = 1;
     clk     = 0;
